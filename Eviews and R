@@ -1,0 +1,18 @@
+#simple way to load an read wf1 files from EViews in R
+# it doesnt skip boilerplot variables
+library(EviewsR)
+file <- readEViews("file directory", as.data.frame = F)
+# data will be loaded as a list, then you can apply required modifications in order to be able to build a data frame afterwards...
+ # e.g. eliminating list number 1 and 6 from travel list:
+travel <- travel[-c(1,6)]
+ # I did so for being able to build up a data frame with a list containing same number of rows in each column...
+
+file <- data.frame(list)
+
+# all set to work :)
+
+
+
+
+
+
